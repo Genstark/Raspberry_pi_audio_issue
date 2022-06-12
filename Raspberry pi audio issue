@@ -1,0 +1,19 @@
+cd /etc/modprobe.d
+sudo nano alsa-blacklist.conf
+
+Add The Following To The File And Save:
+
+blacklist snd_bcm2835
+
+Then Do A:
+
+sudo reboot
+
+sudo nano /boot/config.txt
+
+Change dtparam=audio=on to dtparam=audio=off
+
+Save And Exit. 
+Then Do:
+
+sudo reboot
